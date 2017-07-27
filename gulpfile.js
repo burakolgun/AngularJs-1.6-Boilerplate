@@ -3,8 +3,8 @@
     const minifyCSS = require('gulp-csso');
     const concat = require('gulp-concat');
     const sass = require('gulp-sass');
-    const sassDir = 'css/scss';
-    const cssDir = 'css';
+    const sassDir = 'styles/scss';
+    const cssDir = 'styles/css';
     const JSDir = 'js';
 
     var JSFiles = [
@@ -19,7 +19,7 @@
 
     gulp.task('css', function () {
         return gulp.src(sassFiles)
-            .pipe(sass()) //
+            .pipe(sass())
             .pipe(minifyCSS())
             .pipe(concat('all.css'))
             .pipe(gulp.dest(cssDir))
@@ -27,6 +27,7 @@
     });
     gulp.task('js', function () {
         return gulp.src(JSFiles)
+            .pipe(uglify())
             .pipe(concat('all.js'))
             .pipe(gulp.dest(JSDir))
 
