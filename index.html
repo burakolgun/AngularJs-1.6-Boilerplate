@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
-<html lang="en" ng-app="Aangular-App" >
+<html lang="en" ng-app="boilerplate">
+
 <head>
     <title>Angular App</title>
     <meta charset="utf-8">
@@ -10,12 +11,27 @@
 </head>
 <body>
     <div class="container container-fluid">
-        <h3>Hello, World</h3>
-    </div>
-<footer>
-    <script src="js/angular.min.js" />
-    <script src="js/all.js" />
-</footer>
+        <header>
+            <div class="container">
+                <div class="jumbotron">
+                    <h1>
+                        Version Angular 1.6.5
+                    </h1>
+                </div>
+            </div>
+        </header>
+        
+        <div ng-view></div>
+        
+        <footer>
+            <script src="js/angular.min.js"></script>
+            <script src="app/app.js"></script>
+            <script src="node_modules/underscore/underscore-min.js"></script>
+            <script src="node_modules/angular-route/angular-route.min.js"></script>
+            <script src="controllers/basePage.controller.js"></script>
+            <script src="js/all.js"></script>
+        </footer>
+        </div>
 </body>
-</html>
 
+</html>
