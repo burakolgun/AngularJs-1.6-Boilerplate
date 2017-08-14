@@ -11,23 +11,16 @@
 </head>
 <body>
     <div class="container container-fluid">
-        <header>
-            <div class="container">
-                <div class="jumbotron">
-                    <h1>
-                        Version Angular 1.6.5
-                    </h1>
-                </div>
-            </div>
-        </header>
-        
+        <header-component></header-component>
         <div ng-view></div>
-        
+        <footer-component></footer-component>
         <footer>
             <script src="js/angular.min.js"></script>
             <script src="app/app.js"></script>
             <script src="node_modules/underscore/underscore-min.js"></script>
             <script src="node_modules/angular-route/angular-route.min.js"></script>
+            <script src="components/headerComponent/header.component.js"></script>
+            <script src="components/footerComponent/footer.component.js"></script>
             <script src="controllers/basePage.controller.js"></script>
             <script src="js/all.js"></script>
         </footer>

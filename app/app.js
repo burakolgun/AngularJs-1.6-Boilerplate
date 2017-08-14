@@ -3,11 +3,11 @@ var app = angular
     .config(function ($routeProvider, $locationProvider) {
         $locationProvider.hashPrefix('');
         $routeProvider
-            .when('/home', {
+            .when('/', {
                 controller: 'basePageController',
                 templateUrl: '../views/basePage.html'
             })
             .otherwise({
-                redirectTo: '/home'
+                redirectTo: '/'
             });
     })

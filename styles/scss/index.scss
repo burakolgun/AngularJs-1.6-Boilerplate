@@ -1,2 +1,5 @@
-$size : 4px;
+$contentSize : 400px;
 
+.contentDiv{
+  height: $contentSize;
+}
